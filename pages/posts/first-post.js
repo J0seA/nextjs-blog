@@ -1,3 +1,6 @@
+// Import the Head component from next/head for setting page metadata
+import Head from 'next/head'
+
 // Import the Image component from next/image for optimized, lazy-loaded images
 import Image from 'next/image'
 
@@ -12,6 +15,10 @@ export default function FirstPost() {
   // Return the JSX markup for the first post page
   return (
     <Layout>
+      <Head>
+        <title>First Post | My Blog</title>
+        <meta name="description" content="Read my first blog post" />
+      </Head>
       <h1>First Post</h1>
       <h2>
         <Link href="/">Back to home</Link>
